@@ -1,14 +1,15 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         >
         <LinearLayout
@@ -19,8 +20,8 @@
            >
 
             <com.example.com.newhfuu.personal_center.CircleImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:src="@drawable/person"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
@@ -32,7 +33,9 @@
             android:layout_height="48dp"
             android:orientation="horizontal"
             android:layout_margin="5dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:id="@+id/Account">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -40,7 +43,7 @@
                 android:layout_weight="2"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:id="@+id/C_Info"
+
                 />
             <TextView
                 android:layout_width="0dp"
@@ -58,7 +61,8 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:layout_weight="1"
-           >
+            android:background="@color/white"
+            android:id="@+id/C_Recorder">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -72,7 +76,7 @@
                 android:layout_weight="2"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:id="@+id/C_Recorder"
+
                 />
             <ImageView
                 android:layout_width="wrap_content"
@@ -86,7 +90,8 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            >
+            android:background="@color/white"
+            android:id="@+id/N_Recorder">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -99,7 +104,7 @@
                 android:layout_weight="2"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:id="@+id/N_Recorder"
+
                 />   <!-- 取消预约挂号 放在此处点开的新页面之中-->
             <ImageView
                 android:layout_width="wrap_content"
@@ -113,7 +118,8 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:layout_weight="1"
-          >
+            android:background="@color/white"
+            android:id="@+id/J_Manage">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -123,11 +129,11 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="就诊人管理     "
+                android:text="就诊人管理"
                 android:layout_weight="2"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:id="@+id/J_Manage"
+
                />   <!-- 取消预约挂号 放在此处点开的新页面之中-->
             <ImageView
                 android:layout_width="wrap_content"
@@ -141,7 +147,8 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:layout_weight="1"
-           >
+            android:background="@color/white"
+            android:id="@+id/About">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -150,11 +157,11 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="关于              "
+                android:text="关于"
                 android:layout_weight="2"
                 android:layout_margin="5dp"
                 android:gravity="center"
-                android:id="@+id/About"
+
 
                 />   <!-- 取消预约挂号 放在此处点开的新页面之中-->
             <ImageView
@@ -165,5 +172,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    </ScrollView>
-</RelativeLayout>
+
+</ScrollView>
+    </LinearLayout>

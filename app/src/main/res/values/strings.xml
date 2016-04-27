@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NewHfuu</string>
+    <string name="app_name_account">修改资料</string>
+    <string name="app_name_about">关于</string>
+    <string name="app_name_recorderHistory">历史挂号记录</string>
+    <string name="app_name_recorderNow">当前挂号记录</string>
+    <string name="app_name_manage">就诊人管理</string>
 </resources>
