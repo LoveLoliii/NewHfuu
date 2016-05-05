@@ -5,4 +5,5 @@
     <string name="app_name_recorderHistory">历史挂号记录</string>
     <string name="app_name_recorderNow">当前挂号记录</string>
     <string name="app_name_manage">就诊人管理</string>
+    <string name="signout">退出</string>
 </resources>
