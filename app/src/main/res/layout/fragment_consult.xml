@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
     <!--第一个图标-->
     <RelativeLayout
+        android:id="@+id/rl_meifeizixun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -13,7 +14,9 @@
             android:layout_width="100sp"
             android:layout_height="40sp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:src="@drawable/comment"
+            />
         <TextView
             android:id="@+id/tv_title01"
             android:layout_toRightOf="@id/iv_title01"
@@ -34,21 +37,25 @@
             android:layout_width="100sp"
             android:layout_height="30sp"
             android:layout_alignParentRight="true"
+            android:src="@drawable/toright"
             />
     </RelativeLayout>
 
     <!--第二个图示-->
     <RelativeLayout
+        android:id="@+id/rl_zdyszx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#A2A2A2"
+        android:background="#FFFFFF"
         >
         <ImageView
             android:id="@+id/iv_title02"
             android:layout_width="100sp"
             android:layout_height="40sp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:src="@drawable/doctor"
+            />
         <TextView
             android:id="@+id/tv_title02"
             android:layout_toRightOf="@id/iv_title02"
@@ -69,11 +76,13 @@
             android:layout_width="100sp"
             android:layout_height="30sp"
             android:layout_alignParentRight="true"
+            android:src="@drawable/toright"
             />
     </RelativeLayout>
 
     <!--第三个图标-->
     <RelativeLayout
+        android:id="@+id/rl_sirenyisheng"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -81,7 +90,9 @@
             android:layout_width="100sp"
             android:layout_height="40sp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:src="@drawable/doctor01"
+            />
         <TextView
             android:id="@+id/tv_title03"
             android:layout_toRightOf="@id/iv_title03"
@@ -102,6 +113,7 @@
             android:layout_width="100sp"
             android:layout_height="30sp"
             android:layout_alignParentRight="true"
+            android:src="@drawable/toright"
             />
     </RelativeLayout>
 

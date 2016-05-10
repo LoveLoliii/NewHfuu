@@ -6,14 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-
     </style>
-
     <style name="AppTheme_Account" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/gray</item>
         <item name="colorPrimaryDark">@color/gray2</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
 </resources>

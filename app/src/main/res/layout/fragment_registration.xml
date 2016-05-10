@@ -30,6 +30,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:drawableTop="@drawable/addplus"
                         android:text="预约挂号"
                         />
                     <TextView
@@ -43,7 +44,9 @@
                 <ImageView
                     android:id="@+id/iv_zhixian1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/zhixian"
+                    />
 
                 <!--右边部分的布局-->
                 <LinearLayout
@@ -53,19 +56,28 @@
                     android:layout_weight="0.74">
                     <!--在右边线性布局的基础上，利用线性布局进行上下分段-->
                     <RelativeLayout
+                        android:id="@+id/rl_zixunyisheng"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/iv_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hint"
+                            />
                         <TextView
                             android:id="@+id/tv_zxys"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
+                            android:layout_toRightOf="@id/iv_hint"
                             android:text="咨询医生"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_zxys"
+                            android:layout_toRightOf="@id/iv_hint"
                             android:text="名医专家帮你解答"
                             />
                     </RelativeLayout>
@@ -73,8 +85,9 @@
                     <!--上下分段的分割线-->
                     <ImageView
                         android:id="@+id/zhixian2"
-                        android:layout_width="match_parent"
+                        android:layout_width="243dp"
                         android:layout_height="wrap_content"
+                        android:src="@drawable/zhixian02"
                         />
 
                     <!--相对布局进行左右分割-->
@@ -85,6 +98,7 @@
                             android:id="@+id/tv_jbdz"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:drawableTop="@drawable/zhunxin"
                             android:text="疾病导诊"
                             />
 
@@ -94,12 +108,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/zhixian"
+                            />
                         <TextView
                             android:id="@+id/tv_yyfz"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/iv_zhixian2"
+                            android:drawableTop="@drawable/tingzhenqi"
                             android:text="预约复诊"
                             android:layout_weight="0.28" />
 
@@ -110,7 +127,8 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="20dp"
+                android:src="@drawable/zhixian02"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -124,6 +142,7 @@
                 android:orientation="horizontal"
                 >
                 <Button
+                    android:id="@+id/btn_gynecological"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -131,6 +150,7 @@
                     android:text="妇科"
                     />
                 <Button
+                    android:id="@+id/btn_obstetrics"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -138,6 +158,7 @@
                     android:text="产科"
                     />
                 <Button
+                    android:id="@+id/btn_pediatrics"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -145,6 +166,7 @@
                     android:text="儿科"
                     />
                 <Button
+                    android:id="@+id/btn_TCM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -159,6 +181,7 @@
                 android:orientation="horizontal"
                 >
                 <Button
+                    android:id="@+id/btn_gastroenterology"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -166,6 +189,7 @@
                     android:text="消化内科"
                     />
                 <Button
+                    android:id="@+id/btn_ophthalmic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -173,6 +197,7 @@
                     android:text="眼科"
                     />
                 <Button
+                    android:id="@+id/btn_dermatology"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -180,6 +205,7 @@
                     android:text="皮肤科"
                     />
                 <Button
+                    android:id="@+id/btn_other"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -190,7 +216,8 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="20dp"
+                android:src="@drawable/zhixian02"
                 />
 
 
@@ -219,7 +246,9 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/news01"
+                        />
                     <TextView
                         android:id="@+id/tv_newstitle01"
                         android:layout_width="wrap_content"
@@ -268,7 +297,9 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/news01"
+                        />
                     <TextView
                         android:id="@+id/tv_newstitle02"
                         android:layout_width="wrap_content"

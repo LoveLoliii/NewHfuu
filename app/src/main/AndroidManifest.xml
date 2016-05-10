@@ -16,13 +16,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".registration.RegistrationActivity" />
-        <!--
- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <activity android:name=".registration.Consult_doctorActivity" />
+        <activity android:name=".registration.Sickness_advanceActivity" />
+        <activity android:name=".registration.Subsequent_visitActivity" />
+        <activity android:name=".registration.GynecologicalActivity" />
+        <activity android:name=".Consult.ConsultFragment" />
+        <activity android:name=".MFZXActivity" />
+        <activity android:name=".Consult.KeshiActivity" />
+        <activity android:name=".Hospital.Hospital01" />
+        <activity android:name=".Hospital.Hospital_01mainpage" />
+        <activity android:name=".Hospital.YiyuankeshiActivity" />
+        <activity android:name=".Login.LoginActivity"></activity>
+
 
         <activity
             android:name=".personal_center.AboutActivity"

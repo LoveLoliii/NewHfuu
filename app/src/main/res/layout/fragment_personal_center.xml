@@ -147,7 +147,6 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@color/white"
             android:id="@+id/About">
 
             <TextView
@@ -156,7 +155,7 @@
                 android:text="关于"
                 android:layout_weight="2"
                 android:layout_margin="5dp"
-                android:gravity="center"
+                android:gravity="right"
 
 
                 />   <!-- 取消预约挂号 放在此处点开的新页面之中-->
