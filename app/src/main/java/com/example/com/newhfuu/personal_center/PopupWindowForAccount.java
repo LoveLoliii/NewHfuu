@@ -24,6 +24,7 @@ import com.example.com.newhfuu.R;
 public class PopupWindowForAccount {
     private Context context;
     private Activity activity;
+    private TextView popupTitle,popupContent,popupBtn;
     public PopupWindowForAccount(Context context) {
 
         this.context = context;
@@ -31,18 +32,23 @@ public class PopupWindowForAccount {
 
     /**
      * 显示popupWindow
+     * @param v
      */
-    public void showPopwindow() {
+    public void showPopwindow(String v) {
 
-        activity = (Activity) context;
+       activity = (Activity) context;
         // 利用layoutInflater获得View
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.account_pop_window, null);
 
+        popupTitle = (TextView) view.findViewById(R.id.popupTitle);
+        popupTitle.setText(v);
+
+
         // 下面是两种方法得到宽度和高度 getWindow().getDecorView().getWidth()
 
-        PopupWindow window = new PopupWindow(view,
-                WindowManager.LayoutParams.MATCH_PARENT,
+        final PopupWindow window = new PopupWindow(view,
+                WindowManager.LayoutParams.FIRST_SUB_WINDOW,
                 WindowManager.LayoutParams.WRAP_CONTENT);
 
         // 设置popWindow弹出窗体可点击，这句话必须添加，并且是true
@@ -68,6 +74,7 @@ public class PopupWindowForAccount {
             public void onClick(View v) {
 
                 System.out.println("第一个按钮被点击了");
+                window.dismiss();
             }
         });
 

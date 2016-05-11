@@ -34,7 +34,8 @@
     android:orientation="horizontal"
     android:layout_weight=".5"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/accout_photo">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -57,13 +58,15 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_name">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="姓名"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_name"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -80,7 +83,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_sex">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -103,7 +107,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_IDtype">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -126,7 +131,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_IDnum">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -149,7 +155,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_mobile">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -172,7 +179,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_bloodtype">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -195,7 +203,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_marriage">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -218,7 +227,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_occupation">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -241,7 +251,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_birth">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -264,7 +275,8 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:background="@color/white"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:id="@+id/account_SIN">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -287,7 +299,8 @@
             android:orientation="horizontal"
             android:layout_weight="1"
             android:background="@color/white"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:id="@+id/account_where">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
