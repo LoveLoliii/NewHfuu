@@ -25,6 +25,7 @@ public class PopupWindowForAccount {
     private Context context;
     private Activity activity;
     private TextView popupTitle,popupContent,popupBtn;
+    private PopupWindowBtnDispose popupWindowBtnDispose;
     public PopupWindowForAccount(Context context) {
 
         this.context = context;
@@ -32,9 +33,9 @@ public class PopupWindowForAccount {
 
     /**
      * 显示popupWindow
-     * @param v
+     * @param title
      */
-    public void showPopwindow(String v) {
+    public void showPopwindow(final String title) {
 
        activity = (Activity) context;
         // 利用layoutInflater获得View
@@ -42,7 +43,7 @@ public class PopupWindowForAccount {
         View view = inflater.inflate(R.layout.account_pop_window, null);
 
         popupTitle = (TextView) view.findViewById(R.id.popupTitle);
-        popupTitle.setText(v);
+        popupTitle.setText(title);
 
 
         // 下面是两种方法得到宽度和高度 getWindow().getDecorView().getWidth()
@@ -66,14 +67,20 @@ public class PopupWindowForAccount {
         window.showAtLocation(activity.findViewById(R.id.account_save),//若findViewById寻找的id不在所寻找的view上 会报 a null object reference （空指针引用）
                 Gravity.CENTER, 0, 0);
 
+       // 设置背景颜色变暗
+        WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
+        lp.alpha = 0.5f;
+        activity.getWindow().setAttributes(lp);
         // 这里检验popWindow里的button是否可以点击
-        TextView first = (TextView) view.findViewById(R.id.popupBtn);
-        first.setOnClickListener(new View.OnClickListener() {
+        popupBtn = (TextView) view.findViewById(R.id.popupBtn);
+        popupBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
+
                 System.out.println("第一个按钮被点击了");
+                popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
                 window.dismiss();
             }
         });
@@ -83,6 +90,10 @@ public class PopupWindowForAccount {
 
             @Override
             public void onDismiss() {
+                //恢复颜色
+                WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
+                lp.alpha = 1f;
+                activity.getWindow().setAttributes(lp);
                 System.out.println("popWindow消失");
             }
         });

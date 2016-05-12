@@ -44,6 +44,12 @@ public class AccountActivity extends AppCompatActivity {
 
     private void clicker() {
         account_name.setOnClickListener(ac);
+       account_birth.setOnClickListener(ac);
+        account_sex.setOnClickListener(ac);
+        account_IDnum.setOnClickListener(ac);
+        account_mobile.setOnClickListener(ac);
+        account_where.setOnClickListener(ac);
+        account_SIN.setOnClickListener(ac);
     }
 
     private void init() {

@@ -90,7 +90,8 @@
             android:layout_height="match_parent"
             android:text="性别"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_sex"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -114,7 +115,8 @@
             android:layout_height="match_parent"
             android:text="证件类型"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_IDtype"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -138,7 +140,8 @@
             android:layout_height="match_parent"
             android:text="证件号"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_IDnum"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -162,7 +165,8 @@
             android:layout_height="match_parent"
             android:text="手机号码"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_mobile"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -186,7 +190,8 @@
             android:layout_height="match_parent"
             android:text="血型"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_bloodtype"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -210,7 +215,8 @@
             android:layout_height="match_parent"
             android:text="婚姻状况"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_marriage"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -234,7 +240,8 @@
             android:layout_height="match_parent"
             android:text="职业"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_occupation"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -258,7 +265,8 @@
             android:layout_height="match_parent"
             android:text="生日"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_birth"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -282,7 +290,8 @@
             android:layout_height="match_parent"
             android:text="社保卡"
             android:layout_margin="5dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/account_tv_SIN"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -306,7 +315,8 @@
                 android:layout_height="match_parent"
                 android:text="居住地"
                 android:layout_margin="5dp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/account_tv_where"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
