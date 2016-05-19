@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ public class PopupWindowForAccount {
     private Activity activity;
     private TextView popupTitle,popupContent,popupBtn,popup_sex_male,popup_sex_female,
             popup_bloodtype_a,popup_bloodtype_b,popup_bloodtype_ab,popup_bloodtype_o,popup_marriage_false,popup_marriage_true;
-    private PopupWindowBtnDispose popupWindowBtnDispose;
+    private CliclkerDispose cliclkerDispose;
     public PopupWindowForAccount(Context context) {
 
         this.context = context;
@@ -80,7 +81,8 @@ public class PopupWindowForAccount {
                 popup_sex_female.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_sex_female.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         window.dismiss();
                     }
                 });
@@ -91,8 +93,8 @@ public class PopupWindowForAccount {
                     public void onClick(View v) {
 
 
-                        System.out.println("第一个按钮被点击了");
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_sex_male.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         window.dismiss();
                     }
                 });
@@ -147,7 +149,8 @@ public class PopupWindowForAccount {
                 popup_marriage_false.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_marriage_false.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowMarriage.dismiss();
                     }
                 });
@@ -158,8 +161,8 @@ public class PopupWindowForAccount {
                     public void onClick(View v) {
 
 
-                        System.out.println("第一个按钮被点击了");
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_marriage_true.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowMarriage.dismiss();
                     }
                 });
@@ -240,7 +243,8 @@ public class PopupWindowForAccount {
                 popup_bloodtype_a.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_bloodtype_a.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowBloodtype.dismiss();
                     }
                 });
@@ -249,7 +253,8 @@ public class PopupWindowForAccount {
 
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_bloodtype_b.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowBloodtype.dismiss();
                     }
                 });
@@ -257,7 +262,8 @@ public class PopupWindowForAccount {
 
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_bloodtype_ab.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowBloodtype.dismiss();
                     }
                 });
@@ -265,7 +271,8 @@ public class PopupWindowForAccount {
 
                     @Override
                     public void onClick(View v) {
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popup_bloodtype_o.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowBloodtype.dismiss();
                     }
                 });
@@ -284,6 +291,7 @@ public class PopupWindowForAccount {
                 });
                 break;
             default:
+
                 view = inflater.inflate(R.layout.account_pop_window, null);
 
                 popupTitle = (TextView) view.findViewById(R.id.popupTitle);
@@ -301,8 +309,8 @@ public class PopupWindowForAccount {
                     public void onClick(View v) {
 
 
-                        System.out.println("第一个按钮被点击了");
-                        popupWindowBtnDispose = new PopupWindowBtnDispose(title,context);
+                        String b = popupBtn.getText().toString();
+                        cliclkerDispose = new CliclkerDispose(title,context, b);
                         windowDefault.dismiss();
                     }
                 });
@@ -316,7 +324,7 @@ public class PopupWindowForAccount {
                         WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
                         lp.alpha = 1f;
                         activity.getWindow().setAttributes(lp);
-                        System.out.println("popWindow消失");
+
                     }
                 });
                 break;
