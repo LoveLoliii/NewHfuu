@@ -37,9 +37,25 @@ public class AccountClicker implements View.OnClickListener {
                 break;
 
             case R.id.account_sex:
+                account_tv_sex= (TextView) v.findViewById(R.id.account_tv_sex);
+                title = account_tv_sex.getText().toString();
 
+                p.showPopwindow(title);
                 break;
-
+            case R.id.account_bloodtype:
+                account_tv_bloodtype= (TextView) v.findViewById(R.id.account_tv_bloodtype);
+                title = account_tv_bloodtype.getText().toString();
+                p.showPopwindow(title);
+                break;
+            case R.id.account_marriage:
+                account_tv_marriage = (TextView) v.findViewById(R.id.account_tv_marriage);
+                title = account_tv_marriage.getText().toString();
+                p.showPopwindow(title);
+                break;
+            case R.id.account_occupation:
+                account_tv_occupation = (TextView) v.findViewById(R.id.account_tv_occupation);
+                title = account_tv_occupation.getText().toString();
+                p.showPopwindow(title);
 //                account_tv_IDtype   选择
             case R.id.account_IDnum:   //填写 正则表达式验证？
                 account_tv_IDnum = (TextView) v.findViewById(R.id.account_tv_IDnum);

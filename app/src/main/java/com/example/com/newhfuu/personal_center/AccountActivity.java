@@ -46,10 +46,13 @@ public class AccountActivity extends AppCompatActivity {
         account_name.setOnClickListener(ac);
        account_birth.setOnClickListener(ac);
         account_sex.setOnClickListener(ac);
+        account_bloodtype.setOnClickListener(ac);
         account_IDnum.setOnClickListener(ac);
         account_mobile.setOnClickListener(ac);
         account_where.setOnClickListener(ac);
         account_SIN.setOnClickListener(ac);
+        account_marriage.setOnClickListener(ac);
+        account_occupation.setOnClickListener(ac);
     }
 
     private void init() {

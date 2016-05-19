@@ -2,8 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
     <color name="gray">#c2bfbf</color>
     <color name="white">#FFFFFF</color>
     <color name="gray2">#bfbfbf</color>
+    <color name="male_pressed">#009688</color>
+    <color name="male_normal">#80cbc4</color>
+    <color name="female_normal">#7fa87f</color>
+    <color name="female_pressed">#FF48A948</color>
 </resources>

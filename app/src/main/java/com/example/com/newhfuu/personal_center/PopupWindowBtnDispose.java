@@ -13,7 +13,15 @@ public class PopupWindowBtnDispose {
     switch (title){
         case "姓名":
             Toast.makeText(context,"姓名 点击 处理 ",Toast.LENGTH_SHORT).show();
+
             break;
+        case "性别":
+            Toast.makeText(context,"还没有传参",Toast.LENGTH_SHORT).show();
+            break;
+        case "血型":
+            Toast.makeText(context,"还没有传参",Toast.LENGTH_SHORT).show();
+        case "婚姻状况":
+            Toast.makeText(context,"还没有传参",Toast.LENGTH_SHORT).show();
         case "生日":
             break;
         case "证件号":
@@ -33,6 +41,6 @@ public class PopupWindowBtnDispose {
     }
 
     public void disposeBirth(String birth, Context context) {
-        Toast.makeText(context,"生日 处理 ",Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,"生日 处理 "+birth,Toast.LENGTH_SHORT).show();
     }
 }
