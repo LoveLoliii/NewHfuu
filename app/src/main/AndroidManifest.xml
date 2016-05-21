@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.com.newhfuu">
-
+<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="MANAGE_DOCUMENTS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +30,9 @@
         <activity android:name=".Hospital.Hospital_01mainpage" />
         <activity android:name=".Hospital.YiyuankeshiActivity" />
         <activity android:name=".Login.LoginActivity"></activity>
+        <activity android:name=".personal_center.TestActivity"
+            android:label="Test"
+            android:theme="@style/AppTheme_Account"/>
 
 
         <activity

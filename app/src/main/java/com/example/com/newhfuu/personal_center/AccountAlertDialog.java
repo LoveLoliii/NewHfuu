@@ -31,7 +31,6 @@ Context context;
         ,"制造业","学生","待业"};
 
         AlertDialog alertDialog;
-
          alertDialog = new AlertDialog.Builder(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK).setTitle("职业").setItems(occupation, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -49,14 +48,11 @@ Context context;
         break;
     case "性别":
         final String[] sex = new String[]{ "女", "男"};
-
-
         alertDialog = new AlertDialog.Builder(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK).setTitle("性别").setItems(sex, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 a = which;
                 b=sex[which];
-
                 cliclkerDispose = new CliclkerDispose(title,context,b);
             }
         }).create();
@@ -68,14 +64,11 @@ Context context;
         break;
     case "血型":
         final String[] bloodtype = new String[]{ "A", "B","AB","O"};
-
-
         alertDialog = new AlertDialog.Builder(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK).setTitle("血型").setItems(bloodtype, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 a = which;
                 b=bloodtype[which];
-
                 cliclkerDispose = new CliclkerDispose(title,context,b);
             }
         }).create();
@@ -84,28 +77,14 @@ Context context;
         lp.alpha = 0.6f;
         window.setAttributes(lp);
         alertDialog.show();
-       /* new AlertDialog.Builder(context).setTitle("血型")
-                .setItems(bloodtype, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        a = which;
-                        b=bloodtype[which];
-
-                        cliclkerDispose = new CliclkerDispose(title,context,b);
-                    }
-                }).show();*/
         break;
     case "婚姻状况":
         final String[] marriage = new String[]{ "未婚", "已婚"};
-
-
         alertDialog = new AlertDialog.Builder(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK).setTitle("婚姻状况").setItems(marriage, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 a = which;
                 b=marriage[which];
-
                 cliclkerDispose = new CliclkerDispose(title,context,b);
             }
         }).create();
@@ -114,18 +93,23 @@ Context context;
         lp.alpha = 0.6f;
         window.setAttributes(lp);
         alertDialog.show();
-       /* new AlertDialog.Builder(context).setTitle("婚姻状况")
-                .setItems(marriage, new DialogInterface.OnClickListener() {
-
+      break;
+            case "头像":
+                final String[] pickPhtotType = new String[]{ "本地相册", "拍照"};
+                alertDialog = new AlertDialog.Builder(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK).setTitle("选择图片").setItems(pickPhtotType, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         a = which;
-                        b=marriage[which];
-
+                        b=pickPhtotType[which];
                         cliclkerDispose = new CliclkerDispose(title,context,b);
                     }
-                }).show();
-        break;*/
+                }).create();
+                window = alertDialog.getWindow();
+                lp = window.getAttributes();
+                lp.alpha = 0.6f;
+                window.setAttributes(lp);
+                alertDialog.show();
+                break;
     default:
         break;
 

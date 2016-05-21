@@ -336,7 +336,7 @@ public class PopupWindowForAccount {
 
     private PopupWindow popWindowHindle(View view, Activity activity){
         final PopupWindow window = new PopupWindow(view,
-                WindowManager.LayoutParams.FIRST_SUB_WINDOW,
+                WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.WRAP_CONTENT);
 
         // 设置popWindow弹出窗体可点击，这句话必须添加，并且是true
@@ -351,7 +351,7 @@ public class PopupWindowForAccount {
         // 设置popWindow的显示和消失动画
         window.setAnimationStyle(R.style.popwindow_anim_style);
         // 在底部显示
-        window.showAtLocation(this.activity.findViewById(R.id.account_save),//若findViewById寻找的id不在所寻找的view上 会报 a null object reference （空指针引用）
+        window.showAtLocation(this.activity.findViewById(R.id.account_tv_sex),//若findViewById寻找的id不在所寻找的view上 会报 a null object reference （空指针引用）
                 Gravity.CENTER, 0, 0);
 
         // 设置背景颜色变暗

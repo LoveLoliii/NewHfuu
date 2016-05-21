@@ -10,7 +10,7 @@
     <style name="AppTheme_Account" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/gray</item>
         <item name="colorPrimaryDark">@color/gray2</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#80FFFFFF</item>
 
     </style>
     <style name="popwindow_anim_style">
