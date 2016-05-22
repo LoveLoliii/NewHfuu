@@ -15,6 +15,7 @@ public class Hospital01 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital01);
        RelativeLayout rl_jixilu = (RelativeLayout) findViewById(R.id.rl_jixilu);
+        //绩溪路门诊点击事件
         rl_jixilu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

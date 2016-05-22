@@ -19,8 +19,10 @@ public class Hospital_01mainpage extends AppCompatActivity implements View.OnCli
        Button btn_yiyuanjianjie = (Button) findViewById(R.id.btn_yiyuanjianjie);
 
         btn_yiyuankeshi.setOnClickListener(this);
+        btn_yiyuankeshi.performClick();
         btn_yiyuanfuwu.setOnClickListener(this);
         btn_yiyuanjianjie.setOnClickListener(this);
+
     }
 
     @Override
@@ -29,14 +31,15 @@ public class Hospital_01mainpage extends AppCompatActivity implements View.OnCli
         FragmentTransaction beginTransaction =fragmentManager.beginTransaction();
 
         switch (v.getId()){
+            //医院科室点击事件
             case R.id.btn_yiyuankeshi:
                 beginTransaction.replace(R.id.ll_layout4,new Fragment_yiyuankeshi());
                 break;
-
+            //医院服务点击事件
             case R.id.btn_yiyuanfuwu:
                 beginTransaction.replace(R.id.ll_layout4,new Fragment_yiyuanfuwu());
                 break;
-
+            //医院简介点击事件
             case R.id.btn_yiyuanjianjie:
                 beginTransaction.replace(R.id.ll_layout4,new Fragment_yiyuanjianjie());
                 break;

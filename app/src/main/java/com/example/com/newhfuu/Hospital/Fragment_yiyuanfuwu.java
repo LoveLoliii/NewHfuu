@@ -20,6 +20,8 @@ public class Fragment_yiyuanfuwu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_yiyuanfuwu, null);
+
+        //预约挂号点击事件
         view.findViewById(R.id.tv_yuyueguahao).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

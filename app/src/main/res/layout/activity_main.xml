@@ -22,48 +22,54 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/btn_registration"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:layout_weight="1"
-            android:drawableTop="@drawable/add"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/add_7"
             android:text="挂号"
             />
 
         <Button
             android:id="@+id/btn_consult"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:layout_weight="1"
-            android:drawableTop="@drawable/discussion"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/ic_forum_black_48dp"
             android:text="咨询"
             />
 
         <Button
             android:id="@+id/btn_find"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:layout_weight="1"
-            android:drawableTop="@drawable/search"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/ic_remove_red_eye_black_48dp"
             android:text="发现"
             />
 
         <Button
             android:id="@+id/btn_personal_center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:layout_weight="1"
-            android:drawableTop="@drawable/user"
+            android:focusable="true"
+            android:textColor="@color/gray"
+            android:drawableTop="@drawable/icon_user_normal"
             android:text="个人中心"
             />
 
