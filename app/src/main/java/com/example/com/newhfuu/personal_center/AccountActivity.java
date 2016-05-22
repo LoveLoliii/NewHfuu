@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,6 +19,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -30,6 +33,7 @@ import java.io.File;
 public class AccountActivity extends AppCompatActivity {
     LinearLayout account_photo, account_name, account_sex, account_IDtype, account_IDnum, account_mobile,
             account_bloodtype, account_marriage, account_occupation, account_birth, account_SIN,account_where;
+    ImageView account_iv_photo;
     AccountClicker ac;
     private static final int CODE_GALLERY_REQUEST = 0xa0;
     private static final int CODE_CAMERA_REQUEST = 0xa1;
@@ -69,6 +73,7 @@ public class AccountActivity extends AppCompatActivity {
 
     private void init() {
         /*Context context = getBaseContext();*/
+        // TODO: 2016/5/22    初始化控件
         ac = new AccountClicker(this);
         account_photo = (LinearLayout) findViewById(R.id.account_photo);
         account_name = (LinearLayout) findViewById(R.id.account_name);
@@ -82,6 +87,17 @@ public class AccountActivity extends AppCompatActivity {
         account_birth = (LinearLayout) findViewById(R.id.account_birth);
         account_SIN = (LinearLayout) findViewById(R.id.account_SIN);
         account_where = (LinearLayout) findViewById(R.id.account_where);
+        account_iv_photo = (ImageView) findViewById(R.id.account_iv_photo);
+        // TODO: 2016/5/22  初始化控件数据获取
+        boolean fe;
+        fe =fileIsExists();
+        if(fe==true){
+            Bitmap bitmap = BitmapFactory.decodeFile(Environment
+                    .getExternalStorageDirectory()+"/temp_head_image.jpg");
+            account_iv_photo.setImageBitmap(bitmap);
+            Log.i("f","cunzai");
+        }
+        Log.i("f","buzai");
     }
 
     @Override
@@ -90,6 +106,24 @@ public class AccountActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_account, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    //判断文件是否存在
+    public boolean fileIsExists(){
+        try{
+            File f=new File(Environment
+                    .getExternalStorageDirectory(),"temp_head_image.jpg");
+            if(!f.exists()){
+                return false;
+            }
+
+        }catch (Exception e) {
+            // TODO: handle exception
+            return false;
+        }
+        return true;
+    }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

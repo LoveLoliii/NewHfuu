@@ -20,6 +20,9 @@ import android.widget.Toast;
 import com.example.com.newhfuu.R;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Created by woshi on 2016/5/12.
@@ -92,9 +95,10 @@ public class CliclkerDispose {
     }
 
 
-
+//从图库选取
     private void choseHeadImageFromGallery(Context context) {
         Activity activity = (Activity) context;
+        //// FIXME: 2016/5/22 注释代码无法用于6.0
 //        Intent intentFromGallery = new Intent();
 //        // 设置文件类型
 //        intentFromGallery.setType("image/*");
@@ -107,6 +111,8 @@ public class CliclkerDispose {
         intentFromGallery.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
         activity.startActivityForResult(intentFromGallery, CODE_GALLERY_REQUEST);
     }
+
+    //从相机获取图片
     public void choseHeadImageFromCameraCapture(Context context) {
         Activity activity = (Activity) context;
         if (ContextCompat.checkSelfPermission(context,
@@ -133,7 +139,7 @@ public class CliclkerDispose {
 
         activity.startActivityForResult(intentFromCapture, CODE_CAMERA_REQUEST);
     }}
-
+//存储检查
     public boolean hasSdcard() {
         String state = Environment.getExternalStorageState();
         if (state.equals(Environment.MEDIA_MOUNTED)) {
@@ -145,7 +151,7 @@ public class CliclkerDispose {
             return false;
         }
     }
-
+// 剪裁从相册选取或拍照的相片
     public void cropRawPhoto(Uri uri,Activity activity) {
 Log.i("after","进入剪裁");
         Intent intent = new Intent("com.android.camera.action.CROP");
@@ -166,7 +172,7 @@ Log.i("after","进入剪裁");
         activity.startActivityForResult(intent, CODE_RESULT_REQUEST);
 
     }
-
+//      设置crop后的头像
     public void setImageToHeadView(Intent intent,Context context) {
         Bundle extras = intent.getExtras();
         Activity activity = (Activity) context;
@@ -174,6 +180,31 @@ Log.i("after","进入剪裁");
         if (extras != null) {
             Bitmap photo = extras.getParcelable("data");
             headImage.setImageBitmap(photo);
+            saveBitmap(photo);
         }
     }
+//     保存图片 便于本地加载
+    public void saveBitmap(Bitmap bitmap) {
+        Log.e("TAG", "保存图片");
+        File f = new File(Environment
+                .getExternalStorageDirectory(), IMAGE_FILE_NAME);
+        if (f.exists()) {
+            f.delete();
+        }
+        try {
+            FileOutputStream out = new FileOutputStream(f);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+            out.flush();
+            out.close();
+            Log.i("TAG", "已经保存");
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
 }
