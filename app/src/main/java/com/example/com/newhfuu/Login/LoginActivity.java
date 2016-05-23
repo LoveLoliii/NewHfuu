@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.com.newhfuu.R;
 
+import daoImpl.LoginDispose;
+
 /**
  * 登录功能：
  */
@@ -25,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button loginButton;
     private Intent intent;
     String phoneEditText,pwdEditText;
+    LoginDispose loginDispose = new LoginDispose(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +78,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.login:                    /*登录事件*/
-                Toast.makeText(this,"登录",Toast.LENGTH_SHORT).show();
+
+                loginDispose.login();
                 break;
         }
     }
