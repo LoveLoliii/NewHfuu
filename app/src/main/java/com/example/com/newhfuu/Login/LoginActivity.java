@@ -2,10 +2,13 @@ package com.example.com.newhfuu.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +19,7 @@ import android.widget.Toast;
 import com.example.com.newhfuu.R;
 
 import daoImpl.LoginDispose;
+import entity.PatientBaseInfo;
 
 /**
  * 登录功能：
@@ -28,6 +32,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Intent intent;
     String phoneEditText,pwdEditText;
     LoginDispose loginDispose = new LoginDispose(this);
+    PatientBaseInfo patientBaseInfo;
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.arg1){
+                case 111:
+                    patientBaseInfo = (PatientBaseInfo) msg.obj;
+                    System.out.println(patientBaseInfo.getPatient_phone());
+                    loginAction(patientBaseInfo);
+                    break;
+            }
+        }
+    };
+
+    //执行登录成功 或失败的动作 左手右手一个慢动作~
+
+    private void loginAction(PatientBaseInfo patientBaseInfo) {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +87,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         phoneEdit.addTextChangedListener(new TextWatcherUser());       /* 为输入框添加事件*/
         pwdEdit.addTextChangedListener(new TextWatcherUser());
         loginButton.setEnabled(false);         /* 默认设置登录按钮为不可点击*/
+
+        //add for mobile
+
+
     }
 
     @Override
@@ -78,8 +105,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.login:                    /*登录事件*/
+                patientBaseInfo = new PatientBaseInfo();
+                loginDispose.login(handler);
 
-                loginDispose.login();
+               // Log.i("onFinishReturn",patientBaseInfo.getPatient_name());
+               /*if(patientBaseInfo.isPatient_login_state()==true){
+                   // TODO: 2016/5/24  登录成功操作
+                   Log.i("login success",patientBaseInfo.getPatient_name().toString());
+               }else {
+                   // TODO: 2016/5/24  登录失败操作
+                   Log.i("login failed",patientBaseInfo.getPatient_name().toString());
+                   Log.i("login failed",patientBaseInfo.getPatient_phone().toString());
+               }*/
                 break;
         }
     }

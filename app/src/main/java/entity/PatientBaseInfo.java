@@ -17,7 +17,18 @@ public class PatientBaseInfo {
         private String patient_address;
         private String patient_phone;
         private String patient_ID_card;
-        //add for moblie
+
+    private boolean patient_login_state;
+
+    public boolean isPatient_login_state() {
+        return patient_login_state;
+    }
+
+    public void setPatient_login_state(boolean patient_login_state) {
+        this.patient_login_state = patient_login_state;
+    }
+
+    //add for moblie
         private String patient_photo;
         public int getID() {
             return ID;
